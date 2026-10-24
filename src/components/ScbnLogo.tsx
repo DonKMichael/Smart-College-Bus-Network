@@ -1,3 +1,4 @@
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -28,7 +29,7 @@ export const ScbnLogo: React.FC<ScbnLogoProps> = ({
       } ${className}`}
     >
       <img
-        src="/scbn-logo.svg"
+        src={`${import.meta.env.BASE_URL}scbn-logo.svg`}
         alt="Smart College Bus Network (SCBN) Logo"
         className="w-full h-full object-contain rounded-full"
         draggable={false}
