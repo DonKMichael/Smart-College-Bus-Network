@@ -1,0 +1,6 @@
+{
+  "name": "Smart College Bus Network (SCBN)",
+  "description": "Interactive role-based transportation management dashboard and live multi-bus simulation for college campus mobility.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

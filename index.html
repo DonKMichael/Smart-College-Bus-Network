@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart College Bus Network (SCBN)</title>
+    <meta name="description" content="Interactive role-based transportation management dashboard and live multi-bus simulation for college campus mobility." />
+    <meta property="og:title" content="Smart College Bus Network (SCBN)" />
+    <meta property="og:description" content="Interactive role-based transportation management dashboard and live multi-bus simulation for college campus mobility." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/scbn-logo.svg" />
+    
+    <!-- Polyfill/setter patch to allow browser extensions and interceptors to reassign window.fetch without getter-only errors -->
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var customFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return customFetch || originalFetch;
+            },
+            set: function(fn) {
+              customFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // silently handle if window is already restricted
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#F6F8FF] text-[#252647] antialiased selection:bg-[#7164ED]/20 selection:text-[#7164ED]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

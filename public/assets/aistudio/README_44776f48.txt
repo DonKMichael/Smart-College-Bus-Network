@@ -1,0 +1,14 @@
+SMART COLLEGE BUS NETWORK — FOUR-BUS ROUTE / BOARDING SIMULATION
+
+Run: extract ZIP and open index.html in a modern browser. No installation/server required.
+
+Features:
+- Four animated buses on separate dotted routes, each with 6 stops and a shared College Gate destination.
+- Route selection and current-stop selection for students; estimated pickup updates as buses move.
+- “I have boarded” action and switch. Once boarded, the student sees only their bus and its status.
+- Admin sees all four buses and a passenger manifest listing students marked as boarded per bus.
+- Driver selects a bus at login and only controls that assigned bus.
+- Top-level logout, role-specific dashboard headings, route delay/offline simulations, reports and notifications.
+- Computer Networks section removed from dashboards as requested.
+
+This is a front-end simulation. Location, ETA and updates are simulated; login, driver assignment, and passenger lists are local browser state, not secure shared server data. Refreshing the page resets the demo.
