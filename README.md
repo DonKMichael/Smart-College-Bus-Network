@@ -1,121 +1,263 @@
 # 🚌 Smart College Bus Network (SCBN)
 
-> An interactive role-based campus transportation management system and multi-bus fleet simulation with live telemetry, passenger manifests, and computer-networking diagnostics.
+> An interactive, role-based campus transportation management system featuring a multi-bus fleet simulation, live transit visualization, passenger manifests, emergency communication, and computer-networking diagnostics.
 
-![SCBN Logo](public/scbn-logo.svg)
+<p align="center">
+  <img src="public/scbn-logo.svg" alt="Smart College Bus Network Logo" width="180" />
+</p>
 
----
-
-## ✦ Key Features
-
-- **Multi-Role Workspaces**:
-  - 🎒 **Student Workspace**: Select routes, mark "Waiting at Stop" or "I have boarded", track simulated bus ETAs, and submit emergency support tickets.
-  - 🚌 **Driver Console**: Dedicated controls for assigned bus, trip starting/pausing, stop confirmations, live route queue, and priority broadcast feeds.
-  - 🧑‍💼 **Transport Admin Control Centre**: Fleet overview across all 4 buses, simulate delays or telematic outages, issue emergency broadcasts, inspect full passenger manifests, and manage student reports.
-- **Interactive Live Transit Map**:
-  - Vector road network with road-following geometry, stop markers, zoom controls, full-screen canvas mode, and animated real-time bus position markers.
-- **Connectivity Monitor & Diagnostics**:
-  - Live top-bar connectivity pill (`Connected`, `Partial`, `Offline`) with simulated round-trip latency (`ms`), status dot, and `↻ Refresh Data` cycle.
-  - Explanatory modal covering 6 fundamental computer-networking concepts:
-    1. **Client–Server Architecture**
-    2. **Request–Response Cycle**
-    3. **Latency / Round-Trip Time (RTT)**
-    4. **Polling & Live Updates**
-    5. **Availability Monitoring**
-    6. **Shared State & Data Integrity**
-- **Safety & Alerts**:
-  - Urgent emergency broadcasts with real-time acknowledgment logs and student safety help forms.
-- **Theme & Presentation**:
-  - Full Light and Dark themes, pre-populated with presentation demo values ("Use demo values" / "Clear demo values").
+<p align="center">
+  <strong>Smarter Campus Transportation · Connected Journeys · Safer Travel</strong>
+</p>
 
 ---
 
-## 🚀 How to Host This Full Project on GitHub
+## 📖 About the Project
 
-You can host both the **source code** and the **live website for free** using **GitHub Pages** with the included automated GitHub Actions workflow (`.github/workflows/deploy.yml`).
+**Smart College Bus Network (SCBN)** is a browser-based campus transportation management application designed to demonstrate how students, drivers, and transport administrators can coordinate bus operations through a unified digital platform.
 
-### Step 1: Create a New Repository on GitHub
-1. Go to [github.com/new](https://github.com/new).
-2. Set a repository name (e.g., `smart-college-bus-network` or `scbn`).
-3. Choose **Public** (recommended for free GitHub Pages hosting).
-4. Do **not** initialize with a README, .gitignore, or license (they are already included).
-5. Click **Create repository**.
+The application simulates a fleet of four buses travelling along predefined routes toward a shared college gate. It provides role-specific dashboards, simulated bus telemetry, passenger boarding information, arrival estimates, emergency communication, and a connectivity monitoring interface.
 
-### Step 2: Push Your Code to GitHub
-Run the following commands in your terminal from the project folder:
+SCBN also demonstrates fundamental computer-networking concepts through an interactive connectivity monitor, making it useful as an educational project combining web development, transportation workflows, and networking principles.
 
-```bash
-# 1. Initialize git
-git init -b main
+## ✨ Key Features
 
-# 2. Stage all project files
-git add .
+### 👥 1. Role-Based Workspaces
 
-# 3. Commit the codebase
-git commit -m "Initial commit: Smart College Bus Network"
+The application provides three dedicated workspaces with different responsibilities.
 
-# 4. Link your GitHub repository (replace with your GitHub username and repo name)
-git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
+**🎒 Student Workspace**
+- Select a bus route and boarding stop.
+- View bus status and simulated estimated arrival times.
+- Mark the student as waiting at a stop or boarded.
+- View relevant bus information on the live transit map.
+- Submit assistance requests for missed buses, delays, stop-related issues, or safety concerns.
+- Receive relevant emergency broadcasts.
 
-# 5. Push to GitHub
-git push -u origin main
-```
+**🚌 Driver Console**
+- View information for the assigned bus.
+- Start or pause simulated trips.
+- Confirm stops and view upcoming stops along the route.
+- Monitor students waiting at stops ahead.
+- Receive emergency broadcasts and relevant operational information.
 
-*(Tip: If you use GitHub Desktop or VS Code, you can also use "Publish to GitHub" with one click).*
+**👨‍💼 Transport Administrator Control Centre**
+- Monitor the four-bus fleet from a unified dashboard.
+- Inspect passenger manifests for each bus.
+- View boarded passengers and students waiting at stops.
+- Simulate bus delays and telematics outages.
+- Send emergency broadcasts.
+- Review student assistance requests and reports.
+- Load or clear demonstration data.
+
+### 🗺️ 2. Interactive Live Transit Map
+
+- Visualize the road network and predefined bus routes.
+- Display bus markers with unique identifiers.
+- Simulate bus movement along route geometry.
+- Show bus stops and the shared college-gate destination.
+- Use zoom controls to inspect routes.
+- Expand the map into full-screen mode.
+- Focus on a selected route or bus where supported by the interface.
+
+### 📡 3. Connectivity Monitor & Networking Diagnostics
+
+The connectivity monitor demonstrates essential networking concepts through a dedicated status indicator and explanatory interface.
+
+**Monitoring features**
+- Connection states: `Connected`, `Partial`, and `Offline`.
+- Simulated round-trip latency measurements in milliseconds.
+- A refresh control for demonstrating request-response activity.
+- Connection status and refresh information.
+- An explanation of the distinction between a bus being offline and the application connection being unavailable.
+
+**Computer-networking concepts**
+1. **Client-Server Architecture** — how clients and servers exchange information.
+2. **Request-Response Cycle** — how a request is sent and a response is received.
+3. **Latency and Round-Trip Time (RTT)** — how communication delay can be measured.
+4. **Polling and Live Updates** — how applications periodically refresh information.
+5. **Availability Monitoring** — how connection status can be represented.
+6. **Shared State and Data Integrity** — how consistent application data supports multiple views.
+
+> **Important:** Bus movement, latency values, and connectivity states are simulated for demonstration purposes. They do not necessarily represent actual GPS positions, physical bus telemetry, or real network measurements.
+
+### 👥 4. Passenger Manifest Management
+
+- Organize passenger information by bus.
+- Display boarded and waiting students.
+- Present upcoming-stop information for drivers.
+- Allow students to update their boarding status.
+- Provide administrators with a fleet-wide passenger overview.
+
+### 🚨 5. Emergency Communication & Student Safety
+
+- Allow students to submit assistance requests.
+- Support scenarios involving missed buses, delays, stop-related issues, and safety concerns.
+- Enable administrators to issue emergency broadcasts.
+- Present relevant emergency information to students and drivers.
+- Provide administrative visibility into submitted reports and acknowledgement information where implemented.
+
+### 🎨 6. User Interface & Demonstration Controls
+
+- Light and dark presentation themes.
+- Role-specific navigation and dashboards.
+- Interactive status indicators and information cards.
+- Demonstration controls for loading and clearing sample data.
+- Sample buses, passengers, reports, and operational scenarios for presentations.
 
 ---
 
-### Step 3: Enable Free 1-Click Hosting (GitHub Pages)
-1. In your GitHub repository, click on **Settings** (top tab).
-2. On the left sidebar, click on **Pages**.
-3. Under **Build and deployment** > **Source**, select **GitHub Actions**.
-4. That's it! GitHub will automatically trigger the included workflow (`.github/workflows/deploy.yml`), build the site, and publish it.
-5. In ~1 minute, your live URL will be ready at:
-   ```
-   https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/
-   ```
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| **React** | Component-based user interface |
+| **TypeScript** | Typed application development |
+| **Vite** | Development server and production build tooling |
+| **HTML** | Web application structure |
+| **CSS** | Layout, styling, themes, and responsive presentation |
+| **JavaScript** | Application interactions and simulation logic |
+| **GitHub** | Source code hosting and version control |
+| **GitHub Pages** | Potential static website hosting |
+
+The project's exact dependencies and available commands are defined in `package.json`.
+
+## 🏗️ Application Architecture
+
+SCBN is organized around the following functional areas:
+
+| Component | Responsibility |
+|---|---|
+| **Presentation Layer** | Dashboards, navigation, map, tables, and status indicators |
+| **Role-Based Interface** | Student, driver, and administrator workspaces |
+| **Transportation Simulation** | Bus routes, simulated movement, arrival estimates, and trip status |
+| **Passenger Management** | Boarding information, passenger manifests, and waiting students |
+| **Communication Layer** | Notifications, assistance requests, and emergency broadcasts |
+| **Diagnostics Layer** | Simulated connectivity, latency, and request-response demonstrations |
+
+The architecture describes the application's functional organization. It does not imply that a production backend, real GPS infrastructure, or live vehicle tracking service is configured.
 
 ---
 
-## 💻 Local Development
+## 🚀 Running the Project Locally
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- `npm`
 
-### Installation & Running Locally
+Install the following tools:
+
+- [Node.js](https://nodejs.org/)
+- npm, included with Node.js
+- [Git](https://git-scm.com/) (optional)
+
+### Installation
+
+**1. Clone the repository**
+
+Replace `REPOSITORY-NAME` with the actual repository name.
 
 ```bash
-# 1. Install dependencies
-npm install
-
-# 2. Start local dev server
-npm run dev
-
-# 3. Open browser at http://localhost:3000
+git clone https://github.com/DonKMichael/REPOSITORY-NAME.git
 ```
 
-### Production Build & Preview
+**2. Navigate to the project directory**
 
 ```bash
-# Build production bundle to /dist
-npm run build
+cd REPOSITORY-NAME
+```
 
-# Preview production build locally
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the development server**
+
+```bash
+npm run dev
+```
+
+Open the local URL printed in the terminal. With the default Vite configuration, it is commonly:
+
+`http://localhost:5173/`
+
+**5. Build the production version**
+
+```bash
+npm run build
+```
+
+Vite normally generates the production files in the `dist/` directory.
+
+**6. Preview the production build**
+
+```bash
 npm run preview
 ```
 
+These commands assume that the corresponding scripts are available in `package.json`.
+
 ---
 
-## 🛠️ Built With
+## 🌐 Live Demo
 
-- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Hosting / CI/CD**: [GitHub Pages](https://pages.github.com/) + [GitHub Actions](https://github.com/features/actions)
+**Application:** Add your deployed website URL here once deployment is complete.
+
+The source code is maintained in this GitHub repository. The live demo URL, when available, will provide access to the deployed application separately from the repository's documentation.
+
+---
+
+## 🔐 Security, Data & Limitations
+
+- The application is designed as an interactive demonstration and educational project.
+- Simulated bus locations, arrival estimates, connectivity measurements, and sample passenger records should not be treated as verified operational data.
+- Browser-based role selection alone is not a substitute for secure authentication and server-side authorization.
+- Data persistence and sharing depend on the application's implemented state-management and storage mechanisms.
+- A production deployment should use appropriate authentication, protected APIs, secure data storage, and validated transportation information.
+- Never commit passwords, API keys, private credentials, or secrets to a public repository.
+
+---
+
+## 🎯 Project Objectives
+
+- Demonstrate role-based web application development.
+- Model campus transportation workflows.
+- Simulate a multi-bus fleet and passenger boarding process.
+- Visualize bus routes, arrival estimates, and operational status.
+- Demonstrate emergency communication and reporting workflows.
+- Explain fundamental computer-networking concepts through an interactive interface.
+- Provide a foundation for future integration with real transportation systems.
+
+## 🔮 Future Enhancements
+
+Potential improvements include:
+
+- Real-time GPS integration for physical buses.
+- Backend authentication and role-based authorization.
+- Database-backed passenger, route, and report management.
+- Real-time notifications and emergency alerts.
+- Integration with live network monitoring services.
+- Automated testing and continuous deployment.
+- Improved accessibility and mobile responsiveness.
+
+---
+
+## 👨‍💻 Author
+
+**DonKMichael**
+
+GitHub: [@DonKMichael](https://github.com/DonKMichael)
 
 ---
 
 ## 📄 License
-Apache-2.0
+
+No license is specified in this README. Refer to the repository's `LICENSE` file if one is present. If no license has been added, the project should not be assumed to be available for unrestricted reuse.
+
+---
+
+<p align="center">
+  🚌 <strong>Smart College Bus Network</strong>
+  <br />
+  <em>Connecting students, drivers, and campus transportation through technology.</em>
+</p>
